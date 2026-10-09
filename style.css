@@ -1,9 +1,65 @@
 /* CSS by Cirsa Azouqa */
 /* Color palette */
 /* GLOBAL (base) MOBILE FIRST */
+@media screen and (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    header {
+        font-size: 2em;
+    }
+    nav a {
+        padding: 20px 10px;
+    }
+    .main-container {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 20px auto 0;
+        padding: 15px;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+    .header-content {
+        width: 100%;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-container,
+    .project-container,
+    .about-container,
+    .home-container {
+        margin-top: 40px;
+        padding: 25px;
+    }
+    .resume-header, .project-header {
+        padding: 10px 15px;
+    }
+    .resume-header h1, .project-header h1 {
+        font-size: 24px;
+    }
+    .resume-header p {
+        font-size: 20px;
+    }
+    .introduction {
+        margin-top: 40px;
+        padding: 50px;
+    }
+    .resume-skills,
+    .education,
+    .experience,
+    .about {
+        padding: 20px 25px;
+    }
+    .code-pen-link, .find-me {
+        margin: 50px auto;
+        padding: 25px;
+    }
+}
+
 body {
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     min-height: 100vh;
     background-image: url("images/lace.jpg");
     background-repeat: repeat;
@@ -13,6 +69,7 @@ body {
 header {
     font-family: monospace;
     font-size: 2.0em;
+    overflow-wrap: anywhere;
 }
 nav {
     background-color: #afa4ab;
@@ -20,44 +77,50 @@ nav {
     border-radius: 10px;
     padding: 5px;
     width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     list-style: none;
+    gap: 5px;
     margin: 0;
     padding: 0;
     color: black;
 }
 nav li {
     text-align: center;
+    min-width: 0;
 }
 nav a {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-    padding: 20px 10px;
+    padding: 10px 8px;
+    overflow-wrap: anywhere;
 }
 nav a:hover {
     background-color: #e1b9c4;
     border-radius: 6px;
 }
 .main-container {
+    width: 100%;
     max-width: 800px;
     margin: 40px auto 0;
-    padding: 50px;
+    padding: 15px;
     background-color: #f8e9ed;
     border: 2px solid #e1b9c4;
     border-radius: 10px;
 }
 .header-content {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -71,12 +134,14 @@ nav a:hover {
     text-align: center;
 }
 .introduction {
+    width: 100%;
     max-width: 900px;
     margin: 40px auto 0;
-    padding: 50px;
+    padding: 20px;
     background-color: #afa4ab;
     border-radius: 10px;
     font-family: monospace;
+    overflow-wrap: anywhere;
 }
 .resume-container,
 .project-container,
@@ -91,9 +156,9 @@ nav a:hover {
     border-radius: 10px;
 }
 .resume-header, .project-header {
-    width: 850px;
-    margin: 10px auto 0;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 850px;
+    margin: 10px auto 20px;
     padding: 10px 15px;
     box-sizing: border-box;
     text-align: center;
@@ -147,8 +212,11 @@ nav a:hover {
     text-transform: uppercase;
 }
 .code-pen-link {
-    width: 60%;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 20px;
 }
 .code-pen-link a {
     display: inline-block;
@@ -163,10 +231,12 @@ nav a:hover {
     background-color: #e1b9c4;
 }
 .find-me {
-    width: 60%;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
-    margin: 50px auto;
-    padding: 25px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 20px;
 }
 .find-me a {
     display: inline-block;
